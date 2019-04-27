@@ -15,7 +15,13 @@ class Letter {
   guess(answer) {
     if (this.char.toLowerCase() === answer.toLowerCase()) {
       this.isVisible = true;
+      letterGuessed();
     }
+  }
+
+  leterGuessed() {
+    var letterGuessed = true;
+    return letterGuessed;
   }
 }
 

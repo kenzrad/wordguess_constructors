@@ -19,6 +19,7 @@ class Word {
     console.log(`  
       ${word.join(' ')}
     `);
+
   }
 
   guess(char) {
@@ -33,6 +34,10 @@ class Word {
     return this.letters.every(function(letter) {
       return letter.isVisible;
     });
+  }
+
+  letterGuessed() {
+    return 
   }
 }
 
