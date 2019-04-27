@@ -34,14 +34,14 @@ function play() {
     }
   ])
   .then(function(answer) {
-    word.guess(answer.letter);
+    if (word.guess(answer.letter) === false) {
+      guessesLeft --;
+    }
+
     if (word.guessedCorrectly() === false) {
       play();
     }
-    if (word.letterGuessed() === false) {
-      guessesLeft --;
-      console.log(`Guess left: ${guessesLeft}`);
-    }
+    console.log(guessesLeft);
   });
 }
 

@@ -1,7 +1,12 @@
 class Letter {
   constructor(char) {
     this.char = char;
-    this.isVisible = false;
+    if (char === " ") {
+      this.isVisible = true
+    }
+    else {
+      this.isVisible = false;
+    }
   }
 
   displayed() {
@@ -9,14 +14,15 @@ class Letter {
       return this.char;
     } else {
       return "_";
-    }
+    } 
   }
   
   guess(answer) {
     if (this.char.toLowerCase() === answer.toLowerCase()) {
       this.isVisible = true;
-      letterGuessed();
+      // letterGuessed();
     }
+
   }
 
   leterGuessed() {

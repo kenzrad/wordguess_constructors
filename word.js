@@ -10,11 +10,11 @@ class Word {
   }
 
   printWord() {
-      var word = [];
+    var word = [];
       
-      this.letters.forEach(function(letter) {
+    this.letters.forEach(function(letter) {
       word.push(letter.displayed());
-      });
+    });
 
     console.log(`  
       ${word.join(' ')}
@@ -28,6 +28,14 @@ class Word {
     });
 
     this.printWord();
+
+    console.log(this.letters)
+    console.log(char);
+    if(this.letters.indexOf({ char }) !== -1) {
+      return true;
+    }
+    
+    return false;
   }
 
   guessedCorrectly() {
@@ -36,9 +44,10 @@ class Word {
     });
   }
 
-  letterGuessed() {
-    return 
-  }
+  // letterGuessed() {
+  //   return 
+  // }
+
 }
 
 module.exports = Word;
