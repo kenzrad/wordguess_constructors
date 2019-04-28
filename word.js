@@ -17,7 +17,7 @@ class Word {
     });
 
     console.log(`  
-      ${chalk.blue(word.join(' '))}
+    ${chalk.yellow.bold(word.join(' '))}
     `);
 
   }
@@ -28,12 +28,6 @@ class Word {
     });
 
     this.printWord();
-
-    // if(this.letters.indexOf({ char }) !== -1) {
-    //   letterGuessed = true;
-    //   console.log("Correct!");
-    //   return letterGuessed;
-    // }
   }
 
   guessedCorrectly() {
@@ -41,11 +35,6 @@ class Word {
       return letter.isVisible;
     });
   }
-
-  // letterGuessed() {
-  //   return 
-  // }
-
 }
 
 module.exports = Word;

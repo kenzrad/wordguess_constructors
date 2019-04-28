@@ -57,7 +57,7 @@ function play() {
 
     if(checkLetterBank(answer) === true) {
       console.log(`
-      ${chalk.red.bold("You already tried that letter!")}
+      ${chalk.red("You already tried that letter!")}
       `);
       play();
       return;
@@ -68,12 +68,12 @@ function play() {
     if (checkWord(answer) === false) {
       guessesLeft --;
       console.log(`
-      ${chalk.red('Newp! You have ')}${chalk.yellow.bold(guessesLeft)}${chalk.red(' guesses left!')}
+      ${chalk.blue('Newp! You have ')}${chalk.blue.magenta(guessesLeft)}${chalk.blue(' guesses left!')}
       `);
     }
     else {
       console.log(`
-        CORRECT!!!!
+        ${chalk.magenta.bold("YAS QUEEN!")}
       `)
 
     };
@@ -83,10 +83,10 @@ function play() {
       play();
     }
     else if (guessesLeft === 0){
-      console.log(`${chalk.yellow("Game Over! The word was ")} ${chalk.green.bold(randWord)}`) 
+      console.log(`${chalk.blue("NOPE NOPE NOPE NOPE! The world was ")} ${chalk.green.bold(randWord)}`) 
     }
     else {
-      console.log(`${chalk.green.bold("You win!!!")}`);
+      console.log(`${chalk.green.bold("FANTASTIC!!!")}`);
     }
   });
 }
