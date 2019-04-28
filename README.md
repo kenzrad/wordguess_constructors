@@ -3,7 +3,7 @@ Constructor Wordguess is a command-line game that uses consructor functions
 
 ## Overview
 
-![Word Guess Cli](/readMe/game.mov)
+![Word Guess Cli](/readMe/game.gif)
 
 
 ## Node Packages
