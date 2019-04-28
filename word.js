@@ -17,7 +17,7 @@ class Word {
     });
 
     console.log(`  
-      ${word.join(' ')}
+      ${chalk.blue(word.join(' '))}
     `);
 
   }
@@ -29,13 +29,11 @@ class Word {
 
     this.printWord();
 
-    console.log(this.letters)
-    console.log(char);
-    if(this.letters.indexOf({ char }) !== -1) {
-      return true;
-    }
-    
-    return false;
+    // if(this.letters.indexOf({ char }) !== -1) {
+    //   letterGuessed = true;
+    //   console.log("Correct!");
+    //   return letterGuessed;
+    // }
   }
 
   guessedCorrectly() {
