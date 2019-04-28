@@ -44,6 +44,13 @@ function checkLetterBank(answer) {
   return false;
 }
 
+function checkLetterType(answer) {
+  if(answer.letter.length >1 || answer.letter < 65 || answer.letter > 90) {
+    return true;
+  }
+  return false;
+}
+
 function play() {
   inquirer
   .prompt([
@@ -58,6 +65,14 @@ function play() {
     if(checkLetterBank(answer) === true) {
       console.log(`
       ${chalk.red("You already tried that letter!")}
+      `);
+      play();
+      return;
+    }
+
+    if(checkLetterType(answer) === true) {
+      console.log(`
+      ${chalk.red("You were asked very nicely to choose a letter, kindly oblige")}
       `);
       play();
       return;
