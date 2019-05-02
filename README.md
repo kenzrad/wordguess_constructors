@@ -1,5 +1,5 @@
 # wordguess_constructors
-Constructor Wordguess is a command-line game that uses consructor functions
+Constructor Wordguess is a command-line game that uses constructor functions to create an interactive word guess game.
 
 ## Overview
 
